@@ -1,0 +1,101 @@
+//////////////////////////////
+//logo
+.logo {
+    height: 3.25rem;
+    margin-left: 3rem;
+}
+
+
+//////////////////////////////
+//search Box
+.search {
+    // background: orangered;
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+        color: inherit;
+        font-family: inherit;
+        border-radius: 10rem;
+        font-size: inherit;
+        border: none;
+        background: var(--color-grey-light-2);
+        padding: 0.7rem 2rem;
+        width: 90%;
+        letter-spacing: .2rem;
+        margin-right: -3.25rem;
+        transition: all .2s;
+        &:focus {
+            outline: none;
+            width: 100%;
+            background: var(--color-grey-light-3);
+
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
+    }
+
+    &__input:focus + &__button {
+        background: var(--color-grey-light-3);
+
+    }
+
+    &__button {
+
+        background: var(--color-grey-light-2);
+        border: none;
+        cursor: pointer;
+        &:active,
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        fill: var(--color-grey-dark-3);
+    }
+
+}
+
+//////////////////////////////
+//User-Nav
+.user-nav {
+
+    & > * {
+        padding: 0 1rem;
+        cursor: pointer;
+    }
+
+    display: flex;
+    align-items: center; //flex: 1;
+    //justify-content: flex-end; 
+    &__icon-box {}
+    &__icon {
+        width: 2.25rem;
+        height: 2.25rem; 
+    }
+    &__notification {
+        padding: .5rem;
+        font-size: .2rem; 
+        background: red;
+        border-radius: 100px; 
+        color: white;
+    }
+    &__user {
+        &-photo {
+            height: 3.75rem;
+            border-radius: 50%;
+        }
+        &-name {}
+    }
+
+}
