@@ -195,3 +195,17 @@
     color: var(--color-grey-light-4);
     padding: 2.5rem;
 }
+
+//////////////
+//Gallery
+.gallery {
+    display: flex;
+    &__item {
+        overflow: hidden;
+        display: block;
+        flex: 1 1 4.979%;
+    }
+    &__photo { 
+    width:100%;           
+    }   
+}

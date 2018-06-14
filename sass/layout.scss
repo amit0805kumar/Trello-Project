@@ -1,13 +1,12 @@
 .container {
 
     max-width:80%;
-    //height: 50rem;
     margin: 10rem auto;
     box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     overflow: hidden;
     background: var(--color-grey-light-2);
-
+ 
    .header {
         background-color:#fff;
         border-bottom:1px solid var(--color-grey-light-2);

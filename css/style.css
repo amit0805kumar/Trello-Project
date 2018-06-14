@@ -187,4 +187,13 @@ body {
   color: var(--color-grey-light-4);
   padding: 2.5rem; }
 
+.gallery {
+  display: flex; }
+  .gallery__item {
+    overflow: hidden;
+    display: block;
+    flex: 1 1 4.979%; }
+  .gallery__photo {
+    width: 100%; }
+
 /*# sourceMappingURL=style.css.map */
