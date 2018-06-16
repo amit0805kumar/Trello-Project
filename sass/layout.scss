@@ -1,3 +1,5 @@
+
+
 .container {
 
     max-width: 80%;
@@ -6,6 +8,11 @@
     border-radius: 3px;
     overflow: hidden;
     background: var(--color-grey-light-2);
+    
+    @media only screen and (max-width: $bp-largest){
+             max-width: 100%;
+                margin: 0 0;
+     }
 
     .header {
         background-color: #fff;
@@ -21,6 +28,12 @@
     .content {
         display: flex;
         flex-direction: row;
+
+        
+        @media only screen and (max-width:$bp-medium){
+            flex-direction: column;
+        }
+        
         .side-bar {
             background: var(--color-grey-dark-1);
             flex: 0 0 18%;
@@ -28,11 +41,19 @@
             flex-direction: column;
             justify-content: space-between;
 
+        @media only screen and (max-width:$bp-medium){
+            flex: 1 1 100%;
+            flex-direction: row;
+        
+            }
+            
         }
         .hotelview {
             background-color: #fff;
             flex: 1; //  height: 80rem; //Resposible for height 
         }
+
+    
     }
 
 }

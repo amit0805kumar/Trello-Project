@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+$bp-largest: 75em;   //1200px 
+$bp-large: 68.75em;   //1100px 
+$bp-medium : 56.25em;
+
 :root {
     --color-primary: #eb2f64;
     --color-primary-dark: #BA265D;
@@ -24,6 +28,9 @@
 
 }
 
+
+
+ 
 *,
 *::after,
 *::before {
@@ -32,7 +39,11 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 62.5%; // 1rem = 10 px 10/16=62.5
+
+    @media only screen and (max-width:$bp-large){
+        font-size: 50%; //8px = 1rem
+    }
 }
 
 body {
