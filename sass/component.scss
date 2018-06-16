@@ -286,14 +286,14 @@
     transition: all .2s;
 
     & span {
-        margin-left: 3px;  
+        margin-left: 3px;
         transition: margin-left .2s;
     }
-    
+
     &:hover {
         color: var(--color-grey-dark-1);
-        span{
-            margin-left: 8px; 
+        span {
+            margin-left: 8px;
         }
     }
 
@@ -304,7 +304,7 @@
 }
 
 @keyframes pulsate {
-    0% { 
+    0% {
         transform: scale(1);
         box-shadow: none;
     }
@@ -446,20 +446,69 @@
     }
 
 }
-.cta{
+
+///////////////
+/////CTA
+.cta {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     background: #fff;
     padding: 3.5rem 0;
-    &__book-now{
+    &__book-now {
         margin-bottom: 2.5rem;
-        font-size: 1.5;
-        font-weight: 400;
+        font-size: 2rem;
+        font-weight: 4000;
         text-transform: uppercase;
     }
 }
-.btn{
-    
+
+.btn {
+
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2s;
+    cursor: pointer;
+    &__visible {
+        display: inline-block;
+        padding: 2rem 7.5rem;
+        transition: all 0.2s;
+        width: 100%;
+        height: 100%;
+    }
+    &__invisible {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        top: -100%;
+        padding: 2rem 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s;
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
+
+    &:hover &__invisible {
+        top: 0;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+    } 
+
+    &:focus{
+        outline: none;
+        animation: pulsate 1s infinite; 
+    }
 }
