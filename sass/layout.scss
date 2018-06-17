@@ -1,5 +1,3 @@
-
-
 .container {
 
     max-width: 80%;
@@ -8,13 +6,13 @@
     border-radius: 3px;
     overflow: hidden;
     background: var(--color-grey-light-2);
-    
-    @media only screen and (max-width: $bp-largest){
-             max-width: 100%;
-                margin: 0 0;
-     }
 
-    .header {
+    @media only screen and (max-width: $bp-largest) {
+        max-width: 100%;
+        margin: 0 0;
+    }
+
+.header {
         background-color: #fff;
         border-bottom: var(--line);
         height: 6.5rem;
@@ -22,6 +20,14 @@
         font-size: 1.4rem;
         justify-content: space-between;
         align-items: center;
+    
+        
+     @media only screen and (max-width: $bp-smallest) {
+         flex-wrap: wrap;  
+         height: 11rem; 
+         align-content: space-around; 
+    }
+    
     }
 
 
@@ -29,11 +35,11 @@
         display: flex;
         flex-direction: row;
 
-        
-        @media only screen and (max-width:$bp-medium){
+
+        @media only screen and (max-width: $bp-medium) {
             flex-direction: column;
         }
-        
+
         .side-bar {
             background: var(--color-grey-dark-1);
             flex: 0 0 18%;
@@ -41,19 +47,19 @@
             flex-direction: column;
             justify-content: space-between;
 
-        @media only screen and (max-width:$bp-medium){
-            flex: 1 1 100%;
-            flex-direction: row;
-        
+            @media only screen and (max-width: $bp-medium) {
+                flex: 1 1 100%;
+                flex-direction: row;
+
             }
-            
+
         }
         .hotelview {
             background-color: #fff;
             flex: 1; //  height: 80rem; //Resposible for height 
         }
 
-    
+
     }
 
 }
@@ -63,6 +69,15 @@
     padding: 4.5rem;
     background: var(--color-grey-light-1);
     border-bottom: var(--line);
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+
+    }
+    @media only screen and (max-width:$bp-small) {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 .description {
@@ -72,6 +87,14 @@
     box-shadow: var(--shadow-light);
     padding: 3rem;
     font-size: 1.4rem;
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+      @media only screen and (max-width:$bp-small) { 
+        margin-right: 0; 
+          margin-bottom: 3rem; 
+    }
 }
 
 .user-review {
@@ -79,5 +102,5 @@
     font-size: 1.4rem;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }

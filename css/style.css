@@ -59,6 +59,11 @@ body {
     font-size: 1.4rem;
     justify-content: space-between;
     align-items: center; }
+    @media only screen and (max-width: 31.25em) {
+      .container .header {
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around; } }
   .container .content {
     display: flex;
     flex-direction: row; }
@@ -84,6 +89,13 @@ body {
   padding: 4.5rem;
   background: var(--color-grey-light-1);
   border-bottom: var(--line); }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column;
+      align-items: center; } }
 
 .description {
   flex: 0 0 60%;
@@ -92,6 +104,14 @@ body {
   box-shadow: var(--shadow-light);
   padding: 3rem;
   font-size: 1.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      padding: 2rem;
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
 
 .user-review {
   flex: 1;
@@ -109,6 +129,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%; } }
   .search__input {
     color: inherit;
     font-family: inherit;
@@ -221,6 +245,12 @@ body {
     height: 1.75rem;
     margin-right: 1.5rem;
     fill: currentColor; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        margin-right: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-bottom: .7rem; } }
   .side-nav__link:link, .side-nav__link:visited {
     color: var(--color-grey-light-1);
     text-decoration: none;
@@ -233,6 +263,11 @@ body {
       .side-nav__link:link, .side-nav__link:visited {
         justify-content: center;
         padding: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem .5rem; } }
 
 .legal {
   font-size: 1.2rem;
@@ -263,6 +298,10 @@ body {
     font-weight: 300;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem; } }
   .overview__stars {
     display: flex;
     margin-right: auto; }
@@ -289,12 +328,21 @@ body {
     color: #fff;
     margin-left: 3rem;
     align-self: stretch; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        padding: 0 1.5rem; } }
     .overview__rating-average {
       font-size: 2.25rem;
       font-weight: 300; }
+      @media only screen and (max-width: 37.5em) {
+        .overview__rating-average {
+          font-size: 1.8rem; } }
     .overview__rating-count {
       font-weight: 0.8rem;
       text-transform: uppercase; }
+      @media only screen and (max-width: 37.5em) {
+        .overview__rating-count {
+          font-size: .5rem; } }
 
 .btn-inline {
   border: none;
@@ -362,14 +410,16 @@ body {
   .recommend__count {
     display: inline-block;
     flex: 0 0 60%; }
-  .recommend__peoples-images {
-    box-sizing: content-box;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 50%;
-    border: 3px solid #fff; }
-    .recommend__peoples-images:not(:last-child) {
-      margin-right: -1.5rem; }
+  .recommend__peoples {
+    display: flex; }
+    .recommend__peoples-images {
+      box-sizing: content-box;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      border: 3px solid #fff; }
+      .recommend__peoples-images:not(:last-child) {
+        margin-right: -1.5rem; }
 
 .review {
   position: relative;
@@ -378,6 +428,13 @@ body {
   padding: 3rem;
   margin-bottom: 3.5rem;
   overflow: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .review {
+      margin-bottom: 2rem; } }
   .review__text {
     margin-bottom: 2rem;
     z-index: 10;
@@ -422,6 +479,9 @@ body {
   width: 100%;
   background: #fff;
   padding: 3.5rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    .cta {
+      padding: 2.5rem 0; } }
   .cta__book-now {
     margin-bottom: 2.5rem;
     font-size: 2rem;
